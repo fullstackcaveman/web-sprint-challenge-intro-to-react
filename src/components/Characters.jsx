@@ -8,7 +8,7 @@ const Characters = (props) => {
 	return (
 		<CharactersWrapper>
 			{characters.map((character) => {
-				return <Character {...character} />;
+				return <Character key={character.name} {...character} />;
 			})}
 		</CharactersWrapper>
 	);

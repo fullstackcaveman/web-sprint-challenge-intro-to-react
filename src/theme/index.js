@@ -2,6 +2,7 @@ export default {
 	primaryColor: 'royalblue',
 	secondaryColor: 'crimson',
 	tertiaryColor: 'lime',
+	fontColor: '#4f1605',
 	dangerColor: 'red',
 	black: 'black',
 	white: 'white',

@@ -3,7 +3,7 @@ import React from 'react';
 import { CharacterWrapper, H2, Button } from '../styles/Character.styles.js';
 
 const Character = (props) => {
-	const { name, birth_year } = props;
+	const { name } = props;
 
 	return (
 		<CharacterWrapper>
