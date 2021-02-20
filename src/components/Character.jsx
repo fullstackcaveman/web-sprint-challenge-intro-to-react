@@ -26,7 +26,7 @@ const Character = (props) => {
 						alt={name}
 					/>
 					<div className='info'>
-						<h3 className='birth'>Birth Year: {birth_year}</h3>
+						<p className='birth'>Birth Year: {birth_year}</p>
 						<p>Height: {height}</p>
 						<p>Hair Color: {hair_color}</p>
 						<p>Eye Color: {eye_color}</p>

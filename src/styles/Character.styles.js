@@ -59,6 +59,7 @@ export const CharacterWrapper = styled.div`
 				display: flex;
 				flex-direction: column;
 				height: 90%;
+				margin-top: 20px;
 
 				p {
 					margin: 10px auto;
