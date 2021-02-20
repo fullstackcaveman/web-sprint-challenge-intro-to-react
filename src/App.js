@@ -13,25 +13,41 @@ const App = () => {
 	// sync up with, if any.
 
 	const [characters, setCharacters] = useState([]);
+	const [page, setPage] = useState(1);
+	const url = `${SWAPI_BASE_URL}/?page=${page}`;
 
 	useEffect(() => {
 		const characterList = () => {
 			axios
-				.get(`${SWAPI_BASE_URL}/people`)
+				.get(url)
 				.then((res) => {
 					setCharacters(res.data);
+					console.log(`${SWAPI_BASE_URL}/?page=${page}`, url);
 				})
 				.catch((err) => {
 					console.log(err);
 				});
 		};
 		characterList();
-	}, []);
+	}, [url, page]);
+
+	const setNextPage = () => {
+		setPage(page + 1);
+	};
+
+	const setPrevPage = () => {
+		setPage(page - 1);
+	};
 
 	return (
 		<div className='App'>
 			<h1 className='Header'>Star Wars Characters</h1>
-			<Characters characters={characters} />
+			<Characters
+				characters={characters}
+				page={page}
+				nextpage={setNextPage}
+				prevpage={setPrevPage}
+			/>
 		</div>
 	);
 };
