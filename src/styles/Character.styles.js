@@ -41,6 +41,7 @@ export const CharacterWrapper = styled.div`
 
 		.row {
 			display: flex;
+			justify-content: space-around;
 			height: 100%;
 			width: 100%;
 			/* justify-content: space-between; */
